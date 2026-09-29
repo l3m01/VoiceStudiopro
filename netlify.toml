@@ -1,0 +1,3 @@
+[build]
+  command = "turbo run build --filter voicestudio-electron"
+  publish = "electron/out/renderer"
