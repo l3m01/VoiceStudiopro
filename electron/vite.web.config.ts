@@ -30,6 +30,9 @@ export default defineConfig({
   define: {
     __APP_VERSION__: JSON.stringify(version),
     __WEB_DEPLOYMENT__: true,
+    // Netlify hosts only the static browser bundle; VoiceStudio's persistent
+    // Python/ML backend must run in the desktop app or documented server image.
+    __FRONTEND_ONLY__: JSON.stringify(process.env.NETLIFY === 'true'),
   },
   resolve: {
     alias: {

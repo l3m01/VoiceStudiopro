@@ -5,3 +5,6 @@ declare const __APP_VERSION__: string;
 
 /** True only for the browser bundle served by the Python backend. */
 declare const __WEB_DEPLOYMENT__: boolean;
+
+/** True for a static showcase build that has no application API. */
+declare const __FRONTEND_ONLY__: boolean;

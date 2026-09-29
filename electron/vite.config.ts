@@ -16,6 +16,7 @@ export default defineConfig({
   define: {
     __APP_VERSION__: JSON.stringify('0.0.0-test'),
     __WEB_DEPLOYMENT__: false,
+    __FRONTEND_ONLY__: false,
   },
   resolve: {
     alias: {

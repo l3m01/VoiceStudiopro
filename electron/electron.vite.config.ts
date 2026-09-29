@@ -14,6 +14,7 @@ const frontendPkg = JSON.parse(
 const define = {
   __APP_VERSION__: JSON.stringify(frontendPkg.version),
   __WEB_DEPLOYMENT__: false,
+  __FRONTEND_ONLY__: false,
   __PRO_STORE_ID__: JSON.stringify(process.env.VOICESTUDIO_PRO_STORE_ID ?? ''),
   __PRO_PRODUCT_ID__: JSON.stringify(process.env.VOICESTUDIO_PRO_PRODUCT_ID ?? ''),
   __PRO_YEARLY_VARIANT_ID__: JSON.stringify(process.env.VOICESTUDIO_PRO_YEARLY_VARIANT_ID ?? ''),

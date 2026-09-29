@@ -10,13 +10,16 @@ import './hooks/use-appearance';
 import { App } from './app';
 import { installPreloadRecovery } from './lib/preload-recovery';
 import { installGlobalErrorRecovery } from './lib/global-error-recovery';
+import { FrontendOnly } from './components/frontend-only';
 
 installConsoleCapture();
 installGlobalErrorRecovery();
 installPreloadRecovery();
 
 createRoot(document.getElementById('root')!).render(
-  window.location.hash === '#/capture' ? (
+  __FRONTEND_ONLY__ ? (
+    <FrontendOnly />
+  ) : window.location.hash === '#/capture' ? (
     <CaptureWidget />
   ) : (
     <StrictMode>
